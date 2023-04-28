@@ -6,23 +6,63 @@ public class Conta {
     private int idConta;
     private String dataVencimento;
     private String dataPagamento;
-    private Produto pro;
-    private Cliente cli;
+    private Produto produto;
+    private Cliente cliente;
 
-    public Conta(int idConta, String dataVencimento, String dataPagamento, Produto pro, Cliente cli) {
+    public Conta(int idConta, String dataVencimento, String dataPagamento, Produto produto, Cliente cliente) {
         this.idConta = idConta;
         this.dataVencimento = dataVencimento;
         this.dataPagamento = dataPagamento;
-        this.pro = pro;
-        this.cli = cli;
+        this.produto = produto;
+        this.cliente = cliente;
     }
 
-    public void visualizarConta() {
+    public int getIdConta() {
+		return idConta;
+	}
+
+	public void setIdConta(int idConta) {
+		this.idConta = idConta;
+	}
+
+	public String getDataVencimento() {
+		return dataVencimento;
+	}
+
+	public void setDataVencimento(String dataVencimento) {
+		this.dataVencimento = dataVencimento;
+	}
+
+	public String getDataPagamento() {
+		return dataPagamento;
+	}
+
+	public void setDataPagamento(String dataPagamento) {
+		this.dataPagamento = dataPagamento;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public void visualizarConta() {
     	System.out.println("CONTAS PAGAS");
         System.out.println("IDENTIFICADOR: "+ idConta);
-        System.out.println("PRODUTO: "+ pro.getDescricaoProduto());
-        System.out.println("CLIENTE: " + cli.getNomeCliente() + "  CPF: " + cli.getCpf());
-        System.out.println("VALOR: " + pro.getValorProduto());
+        System.out.println("PRODUTO: "+ produto.getDescricaoProduto());
+        System.out.println("CLIENTE: " + cliente.getNomeCliente() + "  CPF: " + cliente.getCpf());
+        System.out.println("VALOR: " + produto.getValorProduto());
         System.out.println("DATA DE VENCIMENTO: " + dataVencimento);
         System.out.println("DATA DE PAGAMENTO: " + dataPagamento);
         System.out.println("");

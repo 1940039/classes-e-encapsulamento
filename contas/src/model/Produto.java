@@ -9,11 +9,19 @@ public class Produto {
         this.valorProduto = valorProduto;
     }
 
-    public String getDescricaoProduto() {
-        return descricaoProduto;
-    }
+	public String getDescricaoProduto() {
+		return descricaoProduto;
+	}
 
-    public double getValorProduto() {
-        return valorProduto;
-    }
+	public void setDescricaoProduto(String descricaoProduto) {
+		this.descricaoProduto = descricaoProduto;
+	}
+
+	public double getValorProduto() {
+		return valorProduto;
+	}
+
+	public void setValorProduto(double valorProduto) {
+		this.valorProduto = valorProduto;
+	}
 }
